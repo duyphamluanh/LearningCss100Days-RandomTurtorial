@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(196, 206, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    position: relative;
+    padding: 1rem 2rem;
+    margin: 0 2rem;
+    border-radius: 4rem;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px 0 rgba(100,100,111,.6);
+    overflow: hidden; /* So the bubble only show inside button (button => position: relative)*/
+}
+
+button:nth-child(1) {
+    background: linear-gradient(90deg, rgb(5, 1, 68) 0%,rgba(9,9,121,1) 50%, rgb(0, 201, 212) 100%);
+}
+
+button:nth-child(2) {
+    background: linear-gradient(-225deg, rgb(17, 2, 35) 0%,rgb(85, 17, 202,1) 35%, rgb(191, 91, 231) 100%);
+}
+
+button:nth-child(3) {
+    background: rgb(66, 66, 66);
+}
+
+button:nth-child(4) {
+    background: #1a01fb;
+}
+
+span {
+    position: absolute;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: bubble 2s linear infinite;
+}
+
+@keyframes bubble {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    70% {
+        opacity: .25;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: .1;
+    }
+}
