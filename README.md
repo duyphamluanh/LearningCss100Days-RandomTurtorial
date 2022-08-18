@@ -8,6 +8,6 @@ _Turtorial from: Future Web_
 ![Screenshot from 2022-08-17 23-30-58](https://user-images.githubusercontent.com/32034702/185194195-854d361f-3a8a-4cdc-aee3-f549c00a394b.png)   
 _Turtorial from: Online turtorial_  
 
-### Day 3 - Dot Animated Background
+### Day 3 - Dot Animation Background
 ![Screenshot from 2022-08-18 13-40-42](https://user-images.githubusercontent.com/32034702/185317484-4f40914d-e8f3-494f-a9e3-71e2b81f1548.png)
 _Turtorial from: Online turtorial_ 
