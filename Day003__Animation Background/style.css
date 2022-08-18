@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --r: rgb(255, 66, 66);
+    --rt: rgba(255, 66, 66, 0.25);
+    --b: rgb(0, 17, 252);
+    --bt: rgba(0, 17, 252, 0.25);
+    --g: rgb(30, 255, 0);
+    --gt: rgba(30, 255, 0, 0.25);
+    --w: rgb(255, 255, 255);
+    --wt: rgb(255, 255, 255, 0.25);
+    --d: rgb(0, 0, 0);
+    --dt: rgba(0, 0, 0, 0.25);
+    --p: rgb(97, 0, 187);
+    --pt: rgb(97, 0, 187, 0.25);
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(1, 14, 58);
+    overflow: hidden;
+}
+
+
+.container {
+    position: relative;
+    width: 100;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubbles span {
+    position: relative;
+    margin: 0rem 2rem;
+    border-radius: 50%;
+    animation: animate 15s linear infinite;
+    /* transform: translateY(-10vh / var(--i)); */
+    animation-duration: calc(50s / var(--i));   
+}
+
+.bubbles span:nth-child(n+1) {
+    background-color: var(--b);
+    box-shadow: 0px 0px 100px 100px var(--bt),
+    0px 0px 200px 20px var(--b),
+    0px 0px 500px 50px var(--b);
+}
+
+.bubbles span:nth-child(2n+1) {
+    background-color: var(--r);
+    box-shadow: 0px 0px 100px 10px var(--rt),
+    0px 0px 200px 20px var(--r),
+    0px 0px 500px 50px var(--r);
+}
+
+.bubbles span:nth-child(3n+1) {
+    background-color: var(--g);
+    box-shadow: 0px 0px 100px 10px var(--gt),
+    0px 0px 200px 20px var(--g),
+    0px 0px 500px 50px var(--g);
+}
+
+.bubbles span:nth-child(4n+1) {
+    background-color: var(--w);
+    box-shadow: 0px 0px 100px 10px var(--wt),
+    0px 0px 200px 20px var(--w),
+    0px 0px 500px 50px var(--w);
+}
+
+.bubbles span:nth-child(5n+1) {
+    background-color: var(--p);
+    box-shadow: 0px 0px 100px 10px var(--pt),
+    0px 0px 200px 20px var(--p),
+    0px 0px 500px 50px var(--p);
+}
+
+/* .bubbles span {
+    background-color: var(--d);
+    box-shadow: 0px 0px 100px 10px var(--dt),
+    0px 0px 200px 20px var(--d),
+    0px 0px 500px 50px var(--d);
+} */
+
+
+
+@keyframes animate {
+    0% {
+        transform:
+        /* translateZ(120vh)  */
+        /* translateX(120vh)  */
+        translateY(120vh) 
+        scale(0);
+    }
+    100% {
+        transform:
+        /* translateZ(-10vh)  */
+        /* translateX(-10vh) */
+        translateY(-10vh) 
+        scale(0.8);
+    }
+}
