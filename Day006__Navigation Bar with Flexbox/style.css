@@ -48,8 +48,12 @@ header ul.nav_links {
     gap: 2rem;
 }
 
-header ul.nav_links.pr {
+.pr {
     margin-right: 2rem;
+}
+
+.pl {
+    margin-left: 2rem;
 }
 
 
