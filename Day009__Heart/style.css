@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+
+body {
+    background-color: #3e0000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.heart, .heart2 {
+    width: 160px;
+    height: 100px;
+    position: relative;
+    background-color: rgb(227, 0, 53);
+    transition: 1s;
+    margin: 40px;
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 54, 101);
+    transition: 1s;
+    z-index: -10;
+}
+
+.heart2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 157, 180);
+    transition: 1s;
+}
+
+.heart:hover {
+    transform: rotate(45deg) translateX(-30px);
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.heart:hover::before {
+    background-color: rgb(255, 0, 60);;
+    transform: rotate(270deg) translateX(30px) translateY(30px);
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    border-bottom-left-radius: 1rem;
+    z-index: -10;
+}
+
+.heart2:hover {
+    transform: rotate(316deg) translateX(30px);
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.heart2:hover::before {
+    background-color: rgb(255, 0, 60);
+    transform: rotate(90deg) translateX(-30px) translateY(30px);
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 1rem;
+}

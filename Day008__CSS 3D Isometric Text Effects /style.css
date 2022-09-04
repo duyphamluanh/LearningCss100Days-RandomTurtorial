@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 80vw;
+    margin: auto;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 10em;
+    line-height: 0.9em;
+    text-align: center;
+    transform: rotate(-16deg) skew(20deg);
+}
+
+#text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    filter: blur(0.1em);
+    z-index: -1;
+}
+
